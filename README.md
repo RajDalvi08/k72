@@ -1,16 +1,54 @@
-# React + Vite
+# 🎨 K72 —  Animation React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-energy **animation-driven React project** focused on smooth motion, scroll effects, and modern UI interactions.  
+Built for experimentation, creativity, and pushing frontend animations to the next level 🚀
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚡ What’s Inside
 
-## React Compiler
+🔥 Ultra-smooth animations with **GSAP**  
+🌀 Scroll-based magic using **ScrollTrigger**  
+⚛️ React + **Vite** for lightning-fast development  
+📱 Fully responsive layout  
+🎯 Clean, component-based structure  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is all about:
+- Exploring **creative motion design**
+- Learning **GSAP with React**
+- Building visually engaging UI experiences
+- Experimenting with scroll storytelling
+
+---
+
+## 📂 Project Structure
+
+k72/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── pages/
+│ ├── App.jsx
+│ └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+
+🚀 Tech Stack
+
+React
+
+Vite
+
+GSAP
+
+ScrollTrigger
+
+Modern CSS / Tailwind (if enabled)
+
