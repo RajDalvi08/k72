@@ -1,0 +1,9 @@
+.nav-wrapper:hover .nav-green {
+  transform: scaleY(1);
+}
+
+.nav-green {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}

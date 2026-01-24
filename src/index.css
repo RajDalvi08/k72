@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: font1 ;
+  src: url(Lausanne-300.woff2);
+}
+
+@font-face {
+  font-family: font1 ;
+  src: url(Lausanne-500.woff2);
+}
+
+body{
+  background-color: #f3f3f3;
+}
+.moveX{
+  animation-name: moveAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+.moveLink {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.link:hover .moveLink {
+  opacity: 1;
+}
+
+@keyframes moveAnimation{
+  from{
+    transform: translateX(0) ;
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
