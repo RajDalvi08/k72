@@ -1,14 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({ onMenuClick }) => {
+const Navbar = () => {
+  const location = useLocation();
+
+  // Hide Navbar when on /menu so Menu page's header doesn't collide
+  if (location.pathname === "/menu") {
+    return null;
+  }
+
   return (
     <header className="fixed top-0 left-0 z-50 w-full pointer-events-none flex items-start justify-between">
       {/* Logo */}
-      <a
+      <Link
         className="pointer-events-auto p-4 sm:p-6 lg:p-8 block text-white transition-opacity duration-300 hover:opacity-80"
-        href="/"
+        to="/"
         title="Go to home page"
       >
         <div className="sr-only">K72</div>
@@ -22,7 +29,7 @@ const Navbar = ({ onMenuClick }) => {
             d="M35.1441047,8.4486911 L58.6905011,8.4486911 L58.6905011,-1.3094819e-14 L35.1441047,-1.3094819e-14 L35.1441047,8.4486911 Z M20.0019577,0.000230366492 L8.83414254,25.3433089 L18.4876971,25.3433089 L29.5733875,0.000230366492 L20.0019577,0.000230366492 Z M72.5255345,0.000691099476 L72.5255345,8.44846073 L94.3991559,8.44846073 L94.3991559,16.8932356 L72.5275991,16.8932356 L72.5275991,19.5237906 L72.5255345,19.5237906 L72.5255345,43.9274346 L102.80937,43.9274346 L102.80937,35.4798953 L80.9357483,35.4798953 L80.9357483,25.3437696 L94.3996147,25.3428482 L94.3996147,16.8953089 L102.80937,16.8953089 L102.80937,0.000691099476 L72.5255345,0.000691099476 Z M-1.30398043e-14,43.9278953 L8.78642762,43.9278953 L8.78642762,0.0057591623 L-1.30398043e-14,0.0057591623 L-1.30398043e-14,43.9278953 Z M58.6849955,8.4486911 L43.1186904,43.9274346 L52.3166592,43.9274346 L67.9877996,8.4486911 L58.6849955,8.4486911 Z M18.4688864,25.3437696 L26.7045278,43.9278953 L36.2761871,43.9278953 L28.1676325,25.3375497 L18.4688864,25.3437696 Z"
           />
         </svg>
-      </a>
+      </Link>
 
       {/* Top-Right Navigation Group */}
       <div className="pointer-events-auto flex items-start">
@@ -48,10 +55,9 @@ const Navbar = ({ onMenuClick }) => {
           </span>
         </Link>
 
-        {/* Main Menu Button (Top Right Component) */}
-        <button
-          type="button"
-          onClick={onMenuClick}
+        {/* Main Menu Link (Top Right Component) */}
+        <Link
+          to="/menu"
           aria-label="Open navigation menu"
           className="k72-nav-block group relative flex flex-col justify-between p-4 sm:p-5 lg:p-6 
                      h-[4rem] sm:h-[5rem] lg:h-[8.125rem] 
@@ -91,7 +97,7 @@ const Navbar = ({ onMenuClick }) => {
           <span className="relative z-10 font-[font1] uppercase text-xs sm:text-sm lg:text-base font-medium tracking-widest text-white group-hover:text-black transition-colors duration-200 leading-none">
             Menu
           </span>
-        </button>
+        </Link>
       </div>
     </header>
   );

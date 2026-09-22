@@ -9,7 +9,7 @@ const HomeHeroText = () => {
       <div className="uppercase flex justify-center items-center 
         text-[12vw] sm:text-[10vw] lg:text-[9.5vw]
         leading-[11vw] sm:leading-[9vw] lg:leading-[8vw]">
-        L&apos;étincelle
+        The spark for
       </div>
 
       {/* LINE 2 WITH MASK VIDEO */}
@@ -17,7 +17,7 @@ const HomeHeroText = () => {
         text-[12vw] sm:text-[10vw] lg:text-[9.5vw]
         leading-[11vw] sm:leading-[9vw] lg:leading-[8vw]">
 
-        qui
+        all
 
         {/* MASK */}
         <div
@@ -30,14 +30,14 @@ const HomeHeroText = () => {
           <Video />
         </div>
 
-        génère
+        things
       </div>
 
       {/* LINE 3 */}
       <div className="uppercase flex justify-center items-center
         text-[12vw] sm:text-[10vw] lg:text-[9.5vw]
         leading-[11vw] sm:leading-[9vw] lg:leading-[8vw]">
-        la créativité
+        creative
       </div>
 
       {/* PARAGRAPH — RIGHT ALIGNED & SMALLER */}
@@ -47,11 +47,12 @@ const HomeHeroText = () => {
           text-sm sm:text-base lg:text-sm
           leading-relaxed opacity-90"
         >
-          K72 est une agence qui pense chaque action pour nourrir la marque.
-          Demain, dans 5 mois et dans 5 ans. On cherche la friction qui crée
-          l’étincelle pour générer de l’émotion. Pour assurer une relation
-          honnête, on est sans filtre, on dit ce qui doit être dit, on fait ce
-          qui doit être fait.
+          K72 is an agency that builds brands from every angle. Today,
+          tomorrow and years from now. We think the best sparks fly when
+          comfort zones get left behind and friction infuses our strategies,
+          brands and communications with real feeling. We&apos;re transparent,
+          honest and say what we mean, and when we believe in something,
+          we&apos;re all in.
         </p>
       </div>
 

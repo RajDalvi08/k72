@@ -17,7 +17,7 @@ const ProjectCard = (props) => {
       {/* CTA */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
         <span className="uppercase font-[font1] text-white text-xs sm:text-sm md:text-base border-2 border-white px-4 sm:px-8 py-2 sm:py-3 rounded-full">
-          Voir le projet
+          View the project
         </span>
       </div>
 
