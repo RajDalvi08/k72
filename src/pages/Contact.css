@@ -1,0 +1,74 @@
+/* Contact page styles matching k72.ca/en/contact */
+
+.contact-container {
+  background-color: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.contact-banner-btn {
+  position: relative;
+  display: block;
+  width: 120vw;
+  margin-left: -10vw;
+  background-color: #D3FD50;
+  color: #000000;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.contact-banner-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  transition: transform 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  z-index: 1;
+}
+
+.contact-banner-btn:hover::before {
+  transform: scaleY(1);
+}
+
+.contact-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: contactMarquee 10s linear infinite;
+}
+
+.contact-banner-btn:hover .contact-marquee-track {
+  animation-play-state: running;
+}
+
+@keyframes contactMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 9999px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: inherit;
+  transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.social-pill:hover {
+  color: #000000;
+  background-color: #D3FD50;
+  border-color: #D3FD50;
+  transform: scale(1.08);
+}

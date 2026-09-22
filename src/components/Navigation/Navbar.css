@@ -1,9 +1,26 @@
-.nav-wrapper:hover .nav-green {
-  transform: scaleY(1);
+/* K72 Navigation Styles */
+
+.k72-nav-block {
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+  border-bottom-left-radius: 0;
+  transition: color 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.nav-green {
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.3s ease;
+.k72-nav-overlay {
+  transform: translate3d(0, -101%, 0);
+  transition: transform 0.28s cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.k72-nav-block:hover .k72-nav-overlay,
+.k72-nav-block:focus-visible .k72-nav-overlay {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Micro interaction on burger bottom line */
+.k72-nav-block:hover svg line:last-child {
+  transform: translateX(-5px);
 }

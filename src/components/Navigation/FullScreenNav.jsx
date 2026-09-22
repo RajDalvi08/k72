@@ -44,6 +44,18 @@ const FullScreenNav = ({ navTl }) => {
           autoAlpha: 1,
           pointerEvents: 'auto',
         })
+        gsap.set('.stairs', {
+          scaleY: 1,
+          transformOrigin: 'bottom',
+        })
+        gsap.set(fullNavLinkRef.current.children, {
+          y: -60,
+          opacity: 0,
+        })
+        gsap.set('.hello .link', {
+          y: 80,
+          opacity: 0,
+        })
       },
     })
 
@@ -194,19 +206,40 @@ const FullScreenNav = ({ navTl }) => {
 
       {/* NAV CONTENT */}
       <div ref={fullNavLinkRef} className='relative z-30'>
-        <div className='flex w-full justify-between p-5 items-start'>
+        <div className='flex w-full justify-between p-4 sm:p-6 lg:p-8 items-start'>
           {/* Logo */}
-          <a className="c-header_logo relative z-20 bg-amber-50 h-[15vh] w-[13vw] rounded-2xl" href="/" title="Go to home page">
-            <svg width="103" height="44" viewBox="0 0 103 44" className="fill-white">
-              <path d="M35.1441047,8.4486911 L58.6905011,8.4486911 L58.6905011,0 Z" />
+          <a className="relative z-20 block text-white transition-opacity duration-300 hover:opacity-80" href="/" title="Go to home page">
+            <div className="sr-only">K72</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 103 44"
+              className="w-20 sm:w-24 lg:w-28 h-auto fill-current"
+            >
+              <path
+                fillRule="evenodd"
+                d="M35.1441047,8.4486911 L58.6905011,8.4486911 L58.6905011,-1.3094819e-14 L35.1441047,-1.3094819e-14 L35.1441047,8.4486911 Z M20.0019577,0.000230366492 L8.83414254,25.3433089 L18.4876971,25.3433089 L29.5733875,0.000230366492 L20.0019577,0.000230366492 Z M72.5255345,0.000691099476 L72.5255345,8.44846073 L94.3991559,8.44846073 L94.3991559,16.8932356 L72.5275991,16.8932356 L72.5275991,19.5237906 L72.5255345,19.5237906 L72.5255345,43.9274346 L102.80937,43.9274346 L102.80937,35.4798953 L80.9357483,35.4798953 L80.9357483,25.3437696 L94.3996147,25.3428482 L94.3996147,16.8953089 L102.80937,16.8953089 L102.80937,0.000691099476 L72.5255345,0.000691099476 Z M-1.30398043e-14,43.9278953 L8.78642762,43.9278953 L8.78642762,0.0057591623 L-1.30398043e-14,0.0057591623 L-1.30398043e-14,43.9278953 Z M58.6849955,8.4486911 L43.1186904,43.9274346 L52.3166592,43.9274346 L67.9877996,8.4486911 L58.6849955,8.4486911 Z M18.4688864,25.3437696 L26.7045278,43.9278953 L36.2761871,43.9278953 L28.1676325,25.3375497 L18.4688864,25.3437696 Z"
+              />
             </svg>
           </a>
 
           {/* CLOSE BUTTON */}
-          <div className='h-25 w-30  cursor-pointer' onClick={handleCloseClick}>
-            <div className='h-38 w-1 -rotate-50 origin-top absolute bg-[#D3FD50]'></div>
-            <div className='h-38 w-1 right-0 rotate-50 origin-top absolute bg-[#D3FD50]'></div>
-          </div>
+          <button
+            type="button"
+            aria-label="Close navigation menu"
+            className="group relative cursor-pointer p-2 flex items-center justify-center transition-transform duration-300 hover:rotate-90"
+            onClick={handleCloseClick}
+          >
+            <svg
+              viewBox="0 0 139 139"
+              className="w-10 h-10 sm:w-12 sm:h-12 stroke-white group-hover:stroke-[#D3FD50] transition-colors duration-200"
+              fill="none"
+              strokeWidth="4"
+              strokeLinecap="square"
+            >
+              <line x1="10" y1="10" x2="129" y2="129" />
+              <line x1="129" y1="10" x2="10" y2="129" />
+            </svg>
+          </button>
         </div>
 
         {/* Links */}
